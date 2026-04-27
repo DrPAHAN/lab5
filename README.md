@@ -64,8 +64,8 @@ docker run -d \
 
 | Команда         | Ожидаемый результат   |
 |-----------------|-----------------------|
-| ```docker ps --filter "name=lab5" ```    | Оба контейнера в статусе Up   |
+| ```docker ps --filter "name=lab5" ```    | Оба контейнера в статусе ``` Up ```  |
 | ``` docker exec lab5-app python -c "import socket; print(socket.gethostbyname('lab5-db'))" ```| Внутренний IP БД (например, 172.18.0.2)  |
-| ``` curl http://localhost:5000 ```   | {"status":"ok","db_version":"PostgreSQL 15.x..."}       |
+| ``` curl http://localhost:5000 ```   | ``` {"status":"ok","db_version":"PostgreSQL 15.x..."} ``` |
 | ``` docker logs lab5-app ```    | Логи Flask: ``` Running on http://0.0.0.0:5000 ``` |
-| ``` docker network inspect app-lab5-net ``` | Оба контейнера в секции Containers |
+| ``` docker network inspect app-lab5-net ``` | Оба контейнера в секции ``` Containers ``` |
